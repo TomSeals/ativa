@@ -9,11 +9,11 @@
   %div
     = f.label :name
     %br/
-    = f.email_field :name, :autofocus => true
+    = f.text_field :name, :autofocus => true
   %div
     = f.label :profile_pic
     %br/
-    = f.email_field :profile_pic, :autofocus => true
+    = f.file_field :profile_pic, :autofocus => true
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
     %div
       Currently waiting confirmation for: #{resource.unconfirmed_email}

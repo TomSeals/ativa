@@ -2,6 +2,10 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  #moved from ProjectsController, requires user login before viewing
+  #forces authentication for whole application
+  before_action :authenticate_user!
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
