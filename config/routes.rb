@@ -2,7 +2,7 @@ Ativa::Application.routes.draw do
   devise_for :users
   resources :posts
   root 'projects#index'
-  resources :project do
+  resources :projects do
     resources :subscriptions, only: [:create, :destroy]
   end
   

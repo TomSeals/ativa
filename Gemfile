@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 gem 'haml-rails'
 gem 'haml'
 gem 'pry'
-
+gem "better_errors"
+gem "binding_of_caller"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
